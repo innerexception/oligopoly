@@ -1,0 +1,51 @@
+Oligopoly - The Game of Social Mobility!
+
+Survive, Build, or Control
+
+You start on the inner track, can only see this track:
+1. Survive Actions:
+	Move on innermost track
+	-Eat
+	-Pray
+	-Play
+	-Shelter
+		Examples:
+			-Collect average wage
+			Then transfer your wealth to the upper tracks:
+			-Pay rent
+			-Buy food
+			-Buy happiness
+			-Generation ends after 3 circuits
+
+Eventually you will hopefully migrate to the second track via random event or many generations
+2. Build Actions:
+	Middle track
+	-Start Small Business
+	-Buy Shelter
+	-All inner track options
+	-Collect 3x average wage
+	-Generation ends after 3 circuits
+
+Then maybe you will migrate to the outermost track:
+3. Control Actions:
+	Outermost track
+	-Enact legislation
+	-Enact corporate law
+	-Buy labor
+	-All inner track options
+In the outermost track your goal is to prevent revolution
+
+The Board has:
+	3 Concentric Tracks
+	The capital pool (100)
+	Random events for each track / the world
+
+A Player has:
+	Ennui Coefficient (Harder to fill bars)
+	Survive Bar (When each filled, advance tracks)
+	Build Bar (Bonus for each player in Survive track)
+	Control Bar (Bonus for each player in Build and Survive)
+	Resource meter
+
+Each time you circle the tracks, you collect $ based on your labor
+Capital pays based on events
