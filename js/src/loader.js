@@ -2,15 +2,10 @@ require.config({
     baseUrl: 'js',
     paths:{
         'phaser': 'lib/phaser',
-        'masterOfScrumApp': 'src/game',
-        'player': 'src/player',
-        'mosPlayerTypes': 'src/mosPlayerTypes',
-        'connection': 'src/connection',
-        'story': 'src/story',
-        'bug': 'src/bug',
-        'mosStoryTypes': 'src/mosStoryTypes',
-        'board': 'src/board',
-        'lodash': 'lib/lodash.min'
+        'lodash': 'lib/lodash.min',
+        'candy': 'lib/candy',
+        'oligopolyApp': 'src/game',
+        'board': 'src/board'
     },
     shim: {
         'phaser': {
@@ -19,8 +14,27 @@ require.config({
     }
 });
 
-require(['phaser', 'masterOfScrumApp'], function(Phaser, MasterOfScrumApp){
-    MasterOfScrumApp.init(800, 600, Phaser.AUTO, 'appRoot');
+require(['phaser', 'oligopolyApp'], function(Phaser, OligopolyApp){
+
+    //Shitty Globals for Google WebFonts
+    //  The Google WebFont Loader will look for this object, so create it before loading the script.
+    var WebFontConfig = {
+        //  'active' means all requested fonts have finished loading
+        //  We set a 1 second delay before calling 'createText'.
+        //  For some reason if we don't the browser cannot render the text the first time it's created.
+        active: function () {
+            window.setTimeout(fontLibraryReady, 1000);
+        },
+
+        //  The Google Fonts we want to load (specify as many as you like in the array)
+        google: {
+            families: ['Press Start 2P']
+        }
+    };
+
+    var fontLibraryReady = function(){
+        new OligopolyApp(1024, 768, Phaser.AUTO, 'appRoot');
+    }
 });
 
 
